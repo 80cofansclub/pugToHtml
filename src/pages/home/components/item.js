@@ -1,8 +1,5 @@
 
 const Item = ({ id, note, date, time, deleteData }) => {
-    console.log('deleteData', deleteData);
-    console.log('id', id);
-
     function deleteItem() {
         deleteData(function(prev) {
             return prev.filter(item => item.id !== id)

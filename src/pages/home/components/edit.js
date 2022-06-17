@@ -20,13 +20,15 @@ const Edit = ({ add }) => {
 
     function addItem() {
         add(function (prevData) {
-            return [...prevData,
-            {
-                id: v4(),
-                note,
-                date,
-                time
-            }]
+            return [
+                {
+                    id: v4(),
+                    note,
+                    date,
+                    time
+                },
+                ...prevData
+            ]
         })
     }
 
